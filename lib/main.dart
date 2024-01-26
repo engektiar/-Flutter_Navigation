@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:navebar/NagbationBar.dart';
 import 'package:navebar/widgets/My_Curved_Navgiton.dart';
 
 void main() {
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: MyCurved_NavBar(),
+      home: MyCurved(),
     );
   }
 }
