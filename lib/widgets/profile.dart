@@ -6,9 +6,11 @@ class MyProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text("this is Profile page "),
-      ),
+      body: Column(children: [
+        Expanded(
+          child: Text("this is Profile page"),
+        )
+      ]),
     );
   }
 }
