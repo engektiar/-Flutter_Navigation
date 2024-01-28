@@ -1,35 +1,36 @@
 import 'package:flutter/material.dart';
 
-class MyAlertDiglog extends StatefulWidget {
-  const MyAlertDiglog({super.key});
+class MyAlerButton extends StatefulWidget {
+  const MyAlerButton({super.key});
 
   @override
-  State<MyAlertDiglog> createState() => _MyAlertDiglogState();
+  State<MyAlerButton> createState() => _MyAlerButtonState();
 }
 
-class _MyAlertDiglogState extends State<MyAlertDiglog> {
-  myAlrtButton() {
+class _MyAlerButtonState extends State<MyAlerButton> {
+  myalerBuuton() {
     return showDialog(
         context: context,
         builder: (BuildContext context) {
           return Container(
-            height: 350,
+            height: 400,
             width: 200,
             child: AlertDialog(
               actions: [
                 TextButton(
                   onPressed: () {},
-                  child: Text("yes"),
+                  child: Text("Yes"),
                 ),
-                TextButton(
+                IconButton(
                   onPressed: () {
                     Navigator.pop(context);
                   },
-                  child: Text("No"),
+                  icon: Icon(Icons.delete),
                 ),
               ],
-              title: Text("Hi ektiar welcome"),
-              content: Text(" Do you want delete "),
+              backgroundColor: Colors.white,
+              title: Text("this is alert button"),
+              content: Text("do you want to delete "),
             ),
           );
         });
@@ -39,21 +40,20 @@ class _MyAlertDiglogState extends State<MyAlertDiglog> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Alert Dialog Example'),
+        title: Text("This is my allert button"),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ElevatedButton(
-              onPressed: () {
-                myAlrtButton();
-              },
-              child: Text("Detete"),
-            ),
-          ],
-        ),
-      ),
+          child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          ElevatedButton(
+            onPressed: () {
+              myalerBuuton();
+            },
+            child: Text("Delete"),
+          ),
+        ],
+      )),
     );
   }
 }
